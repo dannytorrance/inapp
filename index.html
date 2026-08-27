@@ -407,7 +407,7 @@
     <div class="wrap">
       <div class="topbar-mark">ALFA <b>/</b> InApp Channel</div>
       <div class="topbar-nav">
-        <a href="#overview" class="link-clean">Overview</a><a href="#productshot" class="link-clean">Product</a><a href="#problem" class="link-clean">Problem</a><a href="#flow" class="link-clean">Flow</a><a href="#system" class="link-clean">System</a><a href="#outcomes" class="link-clean">Outcomes</a>
+        <a href="#overview" class="link-clean">Overview</a><a href="#productshot" class="link-clean">Product</a><a href="#problem" class="link-clean">Problem</a><a href="#flow" class="link-clean">Flow</a><a href="#system" class="link-clean">System</a><a href="#tokens" class="link-clean">Tokens</a><a href="#outcomes" class="link-clean">Outcomes</a>
       </div>
       <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -425,6 +425,7 @@
     <a href="#overview"><span>01</span>Overview</a>
     <a href="#problem"><span>02</span>Problem</a>
     <a href="#system"><span>03</span>System</a>
+    <a href="#tokens"><span>04</span>Tokens</a>
     <a href="#outcomes"><span>05</span>Outcomes</a>
   </nav>
 
@@ -556,7 +557,7 @@
       <div class="section-grid" style="margin-bottom:28px;">
         <div class="section-label"><b>—</b>Scope</div>
         <div class="flex-side-by-side">
-          <div class="section-body" class="flex-60-container">
+          <div class="section-body flex-60-container">
             <p>Interactive user flows mapped out the complete InApp workflow: from onboarding and template setup through multi-screen editing, settings management, and finalization. Each flow has a corresponding interactive prototype that demonstrates panel switching, state transitions, and real-world interactions — these prototypes served as the source of truth for the frontend development team.</p>
           </div>
           <div class="flex-40-container">
@@ -588,7 +589,10 @@
         </div>
       </div>
 
-      <div class="catalog hidden" class="hidden">
+      <div class="section-grid section-grid-no-margin">
+        <div class="section-label"></div>
+        <div>
+      <div class="catalog hidden">
 
         <div class="card">
           <div class="card-head"><span class="card-code">M–01</span><span class="card-count">9 states</span></div>
@@ -675,7 +679,7 @@
                 <div class="mock-cell">Popis <i></i></div>
                 <div class="mock-cell">Jazyky <i></i></div>
                 <div class="mock-cell">Identita <i></i></div>
-                <div class="mock-cell" class="flex-20px">···</div>
+                <div class="mock-cell flex-20px">···</div>
               </div>
               <div class="mock-row body">
                 <div class="mock-cb"></div>
@@ -683,7 +687,7 @@
                 <div class="mock-cell">Table Cell</div>
                 <div class="mock-cell"><span class="mock-chip">CZ</span><span class="mock-chip">ENG</span></div>
                 <div class="mock-cell"><span class="mock-chip">OMS</span></div>
-                <div class="mock-cell" class="flex-20px"><div class="mock-dots"><i></i><i></i><i></i></div></div>
+                <div class="mock-cell flex-20px"><div class="mock-dots"><i></i><i></i><i></i></div></div>
               </div>
               <div class="mock-row body">
                 <div class="mock-cb"></div>
@@ -691,7 +695,7 @@
                 <div class="mock-cell">Table Cell</div>
                 <div class="mock-cell"><span class="mock-chip">CZ</span><span class="mock-chip">ENG</span></div>
                 <div class="mock-cell"><span class="mock-chip">OMS</span></div>
-                <div class="mock-cell" class="flex-20px"><div class="mock-dots"><i></i><i></i><i></i></div></div>
+                <div class="mock-cell flex-20px"><div class="mock-dots"><i></i><i></i><i></i></div></div>
               </div>
               <div class="mock-foot"><span><b>0</b> z <b>10</b> vybraných záznamů</span><span>Stránka <b>1</b> z <b>10</b></span></div>
             </div>
@@ -713,6 +717,72 @@
         </div>
 
       </div>
+
+        <div class="tok-block">
+          <div class="tok-heading">Color tokens</div>
+          <div class="swatches">
+            <div class="swatch">
+              <div class="swatch-chip swatch-bg-accent"></div>
+              <div class="swatch-name">accent</div>
+              <div class="swatch-hex">#1EB7F0</div>
+            </div>
+            <div class="swatch hidden">
+              <div class="swatch-chip swatch-bg-white"></div>
+              <div class="swatch-name">accent-inverse</div>
+              <div class="swatch-hex">#FFFFFF</div>
+            </div>
+            <div class="swatch"><div class="swatch-chip swatch-bg-slate-900"></div><div class="swatch-name">slate-800</div><div class="swatch-hex">#1B2434</div></div>
+            <div class="swatch"><div class="swatch-chip swatch-bg-slate-800"></div><div class="swatch-name">slate-700</div><div class="swatch-hex">#2C394C</div></div>
+            <div class="swatch"><div class="swatch-chip swatch-bg-slate-700"></div><div class="swatch-name">slate-600</div><div class="swatch-hex">#3D4B60</div></div>
+            <div class="swatch"><div class="swatch-chip swatch-bg-slate-600"></div><div class="swatch-name">slate-500</div><div class="swatch-hex">#586981</div></div>
+            <div class="swatch"><div class="swatch-chip swatch-bg-slate-500"></div><div class="swatch-name">slate-400</div><div class="swatch-hex">#8697AE</div></div>
+            <div class="swatch"><div class="swatch-chip swatch-bg-slate-300"></div><div class="swatch-name">slate-300</div><div class="swatch-hex">#C3CFDD</div></div>
+            <div class="swatch"><div class="swatch-chip swatch-bg-slate-200"></div><div class="swatch-name">slate-200</div><div class="swatch-hex">#DEE5ED</div></div>
+            <div class="swatch"><div class="swatch-chip swatch-bg-slate-100"></div><div class="swatch-name">slate-100</div><div class="swatch-hex">#EFF3F8</div></div>
+            <div class="swatch"><div class="swatch-chip swatch-bg-slate-50"></div><div class="swatch-name">slate-50</div><div class="swatch-hex">#F7F9FB</div></div>
+          </div>
+        </div>
+
+        <div class="tok-block">
+          <div class="tok-heading">Spacing scale — utility/alfa-gap-*</div>
+          <div class="space-scale">
+            <div class="space-item"><div class="space-bar" style="height:4px;"></div><div class="space-tag"><b>4</b>xs</div></div>
+            <div class="space-item"><div class="space-bar" style="height:8px;"></div><div class="space-tag"><b>8</b>sm</div></div>
+            <div class="space-item"><div class="space-bar" style="height:16px;"></div><div class="space-tag"><b>16</b>md</div></div>
+            <div class="space-item"><div class="space-bar" style="height:24px;"></div><div class="space-tag"><b>24</b>lg</div></div>
+            <div class="space-item"><div class="space-bar" style="height:32px;"></div><div class="space-tag"><b>32</b>xl</div></div>
+          </div>
+        </div>
+
+        <div class="tok-block">
+          <div class="tok-heading">Radius scale</div>
+          <div class="radius-scale">
+            <div class="radius-item"><div class="radius-box radius-box-2"></div><div class="space-tag"><b>2px</b>boder-radius-2px</div></div>
+            <div class="radius-item"><div class="radius-box radius-box-4"></div><div class="space-tag"><b>4px</b>radius/s</div></div>
+            <div class="radius-item"><div class="radius-box radius-box-8"></div><div class="space-tag"><b>8px</b>boder-radius-small</div></div>
+          </div>
+        </div>
+
+        <div class="tok-block">
+          <div class="tok-heading">Typography</div>
+          <div style="font-family:var(--sans); font-size:13px; color:var(--text-hi); margin-bottom:14px;">Primary typeface — <strong>Inter</strong></div>
+          <div class="type-scale">
+            <div class="type-row"><div class="type-sample" style="font-size:16px; font-weight:700;">Card header</div><div class="type-meta">Bold / 16 / 24</div></div>
+            <div class="type-row"><div class="type-sample type-sample-bold">Dialog title</div><div class="type-meta">Bold / 14 / 20</div></div>
+            <div class="type-row"><div class="type-sample type-sample-regular">Body &amp; input text</div><div class="type-meta">Regular / 14 / 20</div></div>
+            <div class="type-row"><div class="type-sample type-sample-medium">Field label, small button</div><div class="type-meta">Medium / 12 / 18</div></div>
+            <div class="type-row"><div class="type-sample type-sample-small">Table header</div><div class="type-meta">Bold / 11 / 16</div></div>
+          </div>
+        </div>
+
+        <div class="responsive-block">
+          <h3>Responsive by design</h3>
+          <p>All screens are designed and tested against a minimum viewport of <strong>1366 × 768 px</strong> — the baseline that ensures usability across older desktop devices. The design scales responsively up to <strong>1920 × 1080 px</strong> and beyond, adapting layouts, spacing and component sizing fluidly across the entire range.</p>
+        </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -746,8 +816,8 @@
     </div>
   </section>
 
-  <footer class="end" class="section-border-top-padded">
-    <div class="wrap" class="flex-wrap-centered">
+  <footer class="end section-border-top-padded">
+    <div class="wrap flex-wrap-centered">
       <span class="text-dim">Design &amp; case study — <span class="text-hi">Radek Jánský</span></span>
       <span class="text-dim">Product — ALFA / InApp Channel</span>
       <span class="text-dim">Tools — Figma</span>
