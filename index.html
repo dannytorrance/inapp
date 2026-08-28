@@ -848,6 +848,48 @@
 
 
   <script>
+    // ---------- Smooth scroll for anchor links ----------
+    function smoothScrollTo(targetY, duration) {
+      const startY = window.scrollY;
+      const distance = targetY - startY;
+      const startTime = performance.now();
+
+      function easeOutQuad(t) { return t * (2 - t); }
+
+      function step(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutQuad(progress);
+        window.scrollTo(0, startY + distance * eased);
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId.length > 1) {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              const targetY = targetEl.getBoundingClientRect().top + window.scrollY;
+              smoothScrollTo(targetY, 200);
+              // Close mobile menu if open
+              const mobileMenu = document.getElementById('mobileNav');
+              if (mobileMenu && mobileMenu.classList.contains('open')) {
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+              }
+            }
+          }
+        });
+      });
+    });
+
     let currentImageIndex = 0;
     let galleryImages = [];
     let isFlowOpen = false;
