@@ -389,6 +389,7 @@
   
   /* Buttons & CTAs */
   .btn-figma { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border: 1px solid var(--accent-deep); border-radius: 999px; background: var(--accent-deep); color: #fff; text-decoration: none; font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; font-weight: 500; box-shadow: 0 8px 28px -8px rgba(3,120,213,0.55); transition: background .15s, box-shadow .15s; }
+  .btn-figma:hover { background: var(--accent); box-shadow: 0 10px 32px -6px rgba(3,120,213,0.7); }
   
   /* Utility */
   .hidden { display: none; }
@@ -400,6 +401,25 @@
   /* Spacing & Sections */
   .section-mt-48-pt-32-border { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
   .section-grid-no-margin { margin-bottom: 0; }
+
+  /* ---- Refactored inline-style utilities ---- */
+  .mt-16 { margin-top: 16px; }
+  .mt-20 { margin-top: 20px; }
+  .mt-32 { margin-top: 32px; }
+  .mb-28 { margin-bottom: 28px; }
+  .mb-32 { margin-bottom: 32px; }
+
+  .role-heading { font-family: var(--display); font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+  .role-list { line-height: 2; margin-left: 20px; }
+  .typeface-label { font-family: var(--sans); font-size: 13px; color: var(--text-hi); margin-bottom: 14px; }
+  .type-sample-card-header { font-size: 16px; font-weight: 700; }
+  .cta-wrap { margin-top: 40px; max-width: 640px; text-align: center; }
+
+  .space-bar-4 { height: 4px; }
+  .space-bar-8 { height: 8px; }
+  .space-bar-16 { height: 16px; }
+  .space-bar-24 { height: 24px; }
+  .space-bar-32 { height: 32px; }
 </style>
 </head>
 <body>
@@ -435,7 +455,7 @@
     <div class="wrap hero-inner">
       <div class="eyebrow">Case Study · New Product Channel</div>
       <h1>Building <em>InApp</em>, the fourth channel of ALFA.</h1>
-      <p class="lede">ALFA already reaches users through three channels — <strong style="color:var(--text-hi)">SMS, Email and Push Notifications</strong>. InApp is the <strong>fourth</strong>: messaging delivered directly inside the product itself, configured on top of ALFA's existing, mature design system (v5.0).</p>
+      <p class="lede">ALFA already reaches users through three channels — <strong class="text-hi">SMS, Email and Push Notifications</strong>. InApp is the <strong>fourth</strong>: messaging delivered directly inside the product itself, configured on top of ALFA's existing, mature design system (v5.0).</p>
       <p class="lede">This case study walks through the Molecules layer built for InApp: the components that let a channel this dense — sidebars, dialogs, tables, settings panels.</p>
 
       <div class="meta">
@@ -470,12 +490,12 @@
         <h2 class="section-title">A configuration surface, not a marketing surface.</h2>
         <div class="section-body">
           <p class="text-hi-large">In plain terms: <strong>InApp is a template configurator.</strong> It's where operators build the messages, banners and guided flows that appear directly inside the product — picking the layout, filling in the content, setting who sees it and when, then publishing it as a template.</p>
-          <p style="margin-top:16px;">SMS, Email and Push Notifications all share one trait: the operator configures the message, and it leaves the product. InApp breaks that pattern — the message <strong>stays inside the product</strong>, so the tooling to build it has to live there too: dense sidebars full of margin, padding, border and shadow controls; dialogs for creating templates; tables for managing data sources; popovers for fine-tuning a single variable.</p>
+          <p class="mt-16">SMS, Email and Push Notifications all share one trait: the operator configures the message, and it leaves the product. InApp breaks that pattern — the message <strong>stays inside the product</strong>, so the tooling to build it has to live there too: dense sidebars full of margin, padding, border and shadow controls; dialogs for creating templates; tables for managing data sources; popovers for fine-tuning a single variable.</p>
         </div>
 
     <div id="role" class="section-mt-48-pt-32-border">
-      <h3 style="font-family:var(--display); font-size:18px; font-weight:700; margin-bottom:16px;">My role</h3>
-      <ul style="line-height:2; margin-left:20px;">
+      <h3 class="role-heading">My role</h3>
+      <ul class="role-list">
         <li>Lead UX/UI design for the InApp channel</li>
         <li>Defined user flows and interaction patterns</li>
         <li>Designed the Molecules layer</li>
@@ -486,8 +506,8 @@
       </ul>
     </div>
 
-    <div style="margin-top:32px;">
-      <p style="max-width:640px;">The InApp channel was designed as a scalable extension of ALFA rather than a standalone product. The resulting system provides a shared foundation for template creation, responsive behaviour and future channel expansion.</p>
+    <div class="mt-32">
+      <p class="system-content-width">The InApp channel was designed as a scalable extension of ALFA rather than a standalone product. The resulting system provides a shared foundation for template creation, responsive behaviour and future channel expansion.</p>
     </div>
       </div>
     </div>
@@ -503,9 +523,9 @@
 
   <section id="productshot" class="section-border-bottom-padded">
     <div class="wrap">
-      <div class="section-grid" style="margin-bottom:32px;">
+      <div class="section-grid mb-32">
         <div class="section-label"><b>—</b>In practice</div>
-        <div class="section-body" style="max-width:640px;">
+        <div class="section-body system-content-width">
           <p>Four real InApp editor screens, each assembled from the atomic component system.</p>
         </div>
       </div>
@@ -582,7 +602,7 @@
 
   <section id="flow" class="section-border-bottom-padded">
     <div class="wrap">
-      <div class="section-grid" style="margin-bottom:28px;">
+      <div class="section-grid mb-28">
         <div class="section-label"><b>—</b>Scope</div>
         <div class="flex-side-by-side">
           <div class="section-body flex-60-container">
@@ -774,11 +794,11 @@
         <div class="tok-block">
           <div class="tok-heading">Spacing scale — utility/alfa-gap-*</div>
           <div class="space-scale">
-            <div class="space-item"><div class="space-bar" style="height:4px;"></div><div class="space-tag"><b>4</b>xs</div></div>
-            <div class="space-item"><div class="space-bar" style="height:8px;"></div><div class="space-tag"><b>8</b>sm</div></div>
-            <div class="space-item"><div class="space-bar" style="height:16px;"></div><div class="space-tag"><b>16</b>md</div></div>
-            <div class="space-item"><div class="space-bar" style="height:24px;"></div><div class="space-tag"><b>24</b>lg</div></div>
-            <div class="space-item"><div class="space-bar" style="height:32px;"></div><div class="space-tag"><b>32</b>xl</div></div>
+            <div class="space-item"><div class="space-bar space-bar-4"></div><div class="space-tag"><b>4</b>xs</div></div>
+            <div class="space-item"><div class="space-bar space-bar-8"></div><div class="space-tag"><b>8</b>sm</div></div>
+            <div class="space-item"><div class="space-bar space-bar-16"></div><div class="space-tag"><b>16</b>md</div></div>
+            <div class="space-item"><div class="space-bar space-bar-24"></div><div class="space-tag"><b>24</b>lg</div></div>
+            <div class="space-item"><div class="space-bar space-bar-32"></div><div class="space-tag"><b>32</b>xl</div></div>
           </div>
         </div>
 
@@ -793,9 +813,9 @@
 
         <div class="tok-block">
           <div class="tok-heading">Typography</div>
-          <div style="font-family:var(--sans); font-size:13px; color:var(--text-hi); margin-bottom:14px;">Primary typeface — <strong>Inter</strong></div>
+          <div class="typeface-label">Primary typeface — <strong>Inter</strong></div>
           <div class="type-scale">
-            <div class="type-row"><div class="type-sample" style="font-size:16px; font-weight:700;">Card header</div><div class="type-meta">Bold / 16 / 24</div></div>
+            <div class="type-row"><div class="type-sample type-sample-card-header">Card header</div><div class="type-meta">Bold / 16 / 24</div></div>
             <div class="type-row"><div class="type-sample type-sample-bold">Dialog title</div><div class="type-meta">Bold / 14 / 20</div></div>
             <div class="type-row"><div class="type-sample type-sample-regular">Body &amp; input text</div><div class="type-meta">Regular / 14 / 20</div></div>
             <div class="type-row"><div class="type-sample type-sample-medium">Field label, small button</div><div class="type-meta">Medium / 12 / 18</div></div>
@@ -823,13 +843,12 @@
           <p>The system follows a strict hierarchical composition: atomic components (buttons, inputs, icons) → molecules → organisms (configurable sidebars, multi-step dialogs, data tables, property inspectors) → full screens. This structure was applied across a complete InApp editor: multiple screens for template registration, editing, settings and preview, plus interactive prototypes demonstrating panel switching and real-world interactions. Every surface, from the simplest input to the densest data table, is assembled from the same atomic building blocks.</p>
           
           
-          <p style="margin-top:20px;">The InApp channel was designed as a scalable extension of ALFA rather than a standalone product. The resulting system provides a shared foundation for template creation, responsive behaviour and future channel expansion.</p>
+          <p class="mt-20">The InApp channel was designed as a scalable extension of ALFA rather than a standalone product. The resulting system provides a shared foundation for template creation, responsive behaviour and future channel expansion.</p>
         </div>
 
-        <div style="margin-top:40px; max-width:640px; text-align:center;">
+        <div class="cta-wrap">
           <a href="https://www.figma.com/design/ZJVuGjKQ3Rk8XorB9WFxkV/InApp-5.0--Radek-J%C3%A1nsk%C3%BD-?node-id=2063-111601&t=xWYZQUB3f4SSOaB0-1" target="_blank" rel="noopener noreferrer"
-             style="display:inline-flex; align-items:center; gap:10px; padding:12px 22px; border:1px solid var(--accent-deep); border-radius:999px; background:var(--accent-deep); color:#fff; text-decoration:none; font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; font-weight:500; box-shadow:0 8px 28px -8px rgba(3,120,213,0.55); transition:background .15s, box-shadow .15s;"
-             onmouseover="this.style.background='var(--accent)'; this.style.boxShadow='0 10px 32px -6px rgba(3,120,213,0.7)'" onmouseout="this.style.background='var(--accent-deep)'; this.style.boxShadow='0 8px 28px -8px rgba(3,120,213,0.55)'">
+             class="btn-figma">
             <svg width="13" height="18" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
               <path d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z" fill="#ffffff"/>
               <path d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z" fill="#ffffff"/>
