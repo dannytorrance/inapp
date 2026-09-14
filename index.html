@@ -567,7 +567,7 @@
         <h2 class="section-title">The challenge</h2>
         <div class="section-body">
           <p>
-            Original ALFA needed large screen to work on and was already on its limit. Adding any feature was rather difficult as UI was already fighting for a space. It required to be redesigned and re-thinked from the ground. That was my part. 
+            The original ALFA interface already required a large screen and was reaching the limits of its existing layout. Adding another complex channel meant rethinking how the workspace used the available space rather than simply adding more UI. That was my part. 
           </p>
           <p>  
             Also ALFA was not responsive at all. InApp continues where ALFA ends.
@@ -592,7 +592,7 @@
         <div class="responsive-block">
           <div class="section-body">
             <h3>How I would approach it today</h3>
-            <p>The project was designed before I incorporated AI-assisted prototyping into my workflow. Today, I would build the core design system and tokens in Figma, then use tools such as Figma Make or Cursor to explore and validate interactive behaviour much earlier than 12 months.</p>
+            <p>Today, I would build the core design system and tokens in Figma, then use tools such as Figma Make or Cursor to explore and validate interactive behaviour much earlier in the process.</p>
           </div>
         </div>
       </div>
@@ -639,6 +639,16 @@
               </h2>
               <p>
                 InApp could have simply been another set of screens. Instead, I decided to build it as an extension of the existing ALFA architecture, using an atomic design system—atoms → molecules → organisms → screens.
+              </p>
+            </div>
+            <div class="responsive-block">
+            <div class="section-body">
+              <p>
+                <p><strong>Problem</strong> → InApp introduced many new screens and interaction patterns. Designing them independently would create duplicated components and make future changes harder to maintain.</p>
+                <p><strong>Options</strong> → Design each screen independently / extend the existing ALFA component architecture. </p>
+                <p><strong>Decision</strong> → Extend the existing atomic system and build InApp from reusable atoms, molecules and organisms. </p>
+                <p><strong>Why</strong> → Shared patterns could evolve consistently across the entire editor while remaining compatible with the existing ALFA product. </p>
+                <p><strong>Result</strong> → 9 molecule groups covering ~158 documented states and variants, all built from the same underlying system.</p>
               </p>
             </div>
           </div>
